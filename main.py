@@ -1,4 +1,5 @@
 import argparse
+import nltk
 
 from utils import measure
 from config import cfg
@@ -35,6 +36,8 @@ if __name__ == '__main__':
     cfg.jobs = args.j
     cfg.filter = args.f
 
+    nltk.download('punkt')
+    nltk.download('wordnet')
     # cfg.print_info()
 
     trainer = RWTrainer(cfg)
