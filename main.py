@@ -18,7 +18,7 @@ def get_parser():
     parser.add_argument('-n', type=int, default=0, help='Prevent numerics-to-string alignment')
     parser.add_argument('-r', type=float, default=0.4, help='Null ratio for posterior regularization')
     parser.add_argument('-j', type=int, default=4, help='Number of workers (multiprocess)')
-    parser.add_argument('-f', type=str, default=None,
+    parser.add_argument('-f', type=str, default='L',
                         help='Filter sentences. "L" for line-scores and "B" for box-scores')
 
     return parser.parse_args()
