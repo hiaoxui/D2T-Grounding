@@ -1,6 +1,9 @@
 # IDE
 .idea/
 
+# cache files
+stuff/cache
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
