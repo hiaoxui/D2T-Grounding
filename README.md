@@ -22,12 +22,8 @@ which is used in our paper.
 Learning Latent Semantic Annotations for Grounding Natural Language to Structured Data
 
     @InProceedings{D18-1411,
-      author = 	"Qin, G.
-            and Yao, J.
-            and Wang, X.
-            and Wang, J.
-            and Lin, C.",
-      title = 	"Learning Latent Semantic Annotations for Grounding Natural Language to Structured Data",
-      booktitle = 	"Empirical Methods in Natural Language Processing (EMNLP)",
-      year = 	"2018",
+      author = "Qin, G. and Yao, J. and Wang, X. and Wang, J. and Lin, C.",
+      title = "Learning Latent Semantic Annotations for Grounding Natural Language to Structured Data",
+      booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
+      year = "2018",
     }
