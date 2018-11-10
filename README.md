@@ -1,4 +1,4 @@
-# D2T_Grounding
+# Learning Latent Semantic Annotations for Grounding Natural Language to Structured Data
 
 ## Introduction
 
