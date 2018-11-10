@@ -40,6 +40,52 @@ For more details of posterior regularization,
 please refer to the comments of PR.py.
 To get an example of the usage of Semi-HMMs, please refer to the experiment part of our project.
 
+## Language Grounding (From Texts to Structured Data)
+
+Besides Semi-HMMs, the main part of our project is devoted to grounding natural language to structured data. 
+The dataset we use here is [RotoWire](https://github.com/harvardnlp/boxscore-data).
+It could be divided into four parts: 
+Data processing, tag induction, parameter estimation and inference.
+
+### Data Processing
+
+Relevant folders: Preprocessing, framework
+
+RotoWire is very noisy, so preprocessing work is inevitable. We did the following things:
+
++ Detect all the proper nouns (First letter capitalized) and numbers.
++ Filter out the very short sentences, most of which are meaningless.
++ Align each sentence to its relevant records (sentence level) with heuristic methods.
+
+### Tag Induction
+
+Relevant folders: Framework, logic
+
+The second step is to automatically generate the tag set.
+Note that we don't need to form the tag set manually.
+The tag set is generated based on the table schema, 
+which is specified in the "MetaTable" class.
+
+### Training
+
+You could set the "z" option in main.py as "train" to start training.
+There are also some other options corresponding to Semi-HMMs, 
+you could refer to the Semi-HMMs section for explanation.
+
+The main project will initialize a "trainer" object, 
+which is used to estimate the parameters of Semi-HMMs.
+
+The E step of expectation maximization will loop over 
+the whole dataset to obtain soft counts of alignments, 
+thus this could be done in parallel.
+Since there is no true multi-thread in Python,
+we use multi-processing instead.
+You could specify the number of jobs in main.py.
+
+### Inference
+
+You could specify the "z" option in main.py as "test" to start inference.
+
 ## Paper
 
 Learning Latent Semantic Annotations for Grounding Natural Language to Structured Data
