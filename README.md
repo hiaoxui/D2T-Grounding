@@ -17,6 +17,13 @@ This project provides a toolkit for hidden semi-Markov models training and infer
 as well as an example which works on dataset [RotoWire](https://github.com/harvardnlp/boxscore-data),
 which is used in our paper.
 
+## Prerequisite
+
++ Operating System: Linux
++ Interpreter: Python 3.6
++ Python packages: Numpy, pandas, SciPy, tqdm, nltk, colorama
+
+
 ## Hidden Semi-Markov Model (Semi-HMMs)
 
 Inside the folder "HMMs" are the components of Semi-HMMs: HMMs itself, 
